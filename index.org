@@ -1,0 +1,12 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="stylesheets/worg.css"/>
+#+AUTHOR: alex
+#+CREATOR: alex
+#+EMAIL: yuanzhang93.chen@gmail.com
+#+OPTIONS: toc:nil ^:nil num:4
+#+STARTUP: showall
+
+* alex-chen's Blog
+Welcome to alex-chen's blog
+
+** elisp 学习笔记
+- [[file:source/elisp-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AClist.html][elisp 字符串转 list 操作]]

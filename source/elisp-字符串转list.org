@@ -1,0 +1,45 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="stylesheets/worg.css"/>
+#+AUTHOR: alex
+#+CREATOR: alex
+#+EMAIL: yuanzhang93.chen@gmail.com
+#+OPTIONS: toc:t ^:nil num:4
+#+STARTUP: showall
+
+* elisp 将一个字符串转化为 list
+#+BEGIN_SRC elisp
+  (append str nil)
+#+END_SRC
+方法可以将 str 字符串转化为 list
+
+* 将 list 输出
+可以使用 =dolist= 输出
+#+BEGIN_SRC elisp
+  (defun print-str (str)
+    (dolist (c (append str nil))
+      (insert c)))
+
+  (print-str "abcdefghijk")
+
+  => abcdefghijk
+#+END_SRC
+
+也可以使用 =dotimes= 输出
+#+BEGIN_SRC elisp
+  (defun print-str (str)
+    (setq myList (append str nil))
+    (dotimes (i (length myList))
+      (insert (nth-value i myList))))
+
+  (print-str "abcdefg")
+
+  =>abcdefg
+#+END_SRC
+
+同时字符串也是序列类型, 可以使用 =elt= 取值
+#+BEGIN_SRC elisp
+  (setq myStr "abcdefghjk")
+  (dotimes (i (length myStr))
+    (insert (elt myStr i)))
+
+  => abcdefghjk
+#+END_SRC
