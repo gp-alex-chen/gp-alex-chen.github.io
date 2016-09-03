@@ -1,0 +1,13 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="stylesheets/worg.css"/>
+#+AUTHOR: alex
+#+CREATOR: alex
+#+EMAIL: yuanzhang93.chen@gmail.com
+#+OPTIONS: toc:t ^:nil num:4
+#+STARTUP: showall
+
+This days, I want to install Emacs in Android and there are some question to fix
+
+* '(wrong-type-argument stringp (require . t-mouse))'
+When I use er/expand-region and magit-status meet this question.
+
+You can read [[http://emacs.stackexchange.com/questions/5552/emacs-on-android-org-mode-error-wrong-type-argument-stringp-require-t][this]] and know how to fix this question.
