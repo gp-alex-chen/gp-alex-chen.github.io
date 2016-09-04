@@ -7,7 +7,23 @@
 
 This days, I want to install Emacs in Android and there are some question to fix
 
-* '(wrong-type-argument stringp (require . t-mouse))'
+* COMMENT '(wrong-type-argument stringp (require . t-mouse))'
 When I use er/expand-region and magit-status meet this question.
 
 You can read [[http://emacs.stackexchange.com/questions/5552/emacs-on-android-org-mode-error-wrong-type-argument-stringp-require-t][this]] and know how to fix this question.
+
+This is the code.
+#+BEGIN_SRC emacs-lisp
+  (defun load-history-filename-element (file-regexp)
+    "Get the first elt of `load-history' whose car matches FILE-REGEXP.
+          Return nil if there isn't one."
+    (let* ((loads load-history)
+           (load-elt (and loads (car loads))))
+      (save-match-data
+        (while (and loads
+                    (or (null (car load-elt))
+                        (not (and (stringp (car load-elt)) ; new condition
+                                  (string-match file-regexp (car load-elt))))))
+          (setq loads (cdr loads)
+                load-elt (and loads (car loads)))))
+#+END_SRC
