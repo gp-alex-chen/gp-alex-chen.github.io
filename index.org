@@ -12,4 +12,4 @@ Welcome to alex-chen's blog
 - [[file:source/elisp-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AClist.html][elisp 字符串转 list 操作]]
 
 ** Emacs in Android
-- [[file:source/fixEmacsInAndroid-stringp-error.html][how to fix '(wrong-type-argument-stringp (require . t-mouse))']]
+- [[file:source/fixEmacsInAndroid-stringp-error.html][How to fix '(wrong-type-argument-stringp (require . t-mouse))']]
