@@ -7,7 +7,7 @@
 
 This days, I want to install Emacs in Android and there are some question to fix
 
-* COMMENT '(wrong-type-argument stringp (require . t-mouse))'
+* '(wrong-type-argument stringp (require . t-mouse))'
 When I use er/expand-region and magit-status meet this question.
 
 You can read [[http://emacs.stackexchange.com/questions/5552/emacs-on-android-org-mode-error-wrong-type-argument-stringp-require-t][this]] and know how to fix this question.
